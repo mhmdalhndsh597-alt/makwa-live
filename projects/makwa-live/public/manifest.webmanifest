@@ -1,0 +1,11 @@
+{
+  "name": "ماكوا لايف | Makwa Live",
+  "short_name": "ماكوا لايف",
+  "lang": "ar-EG",
+  "dir": "rtl",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4f7ff",
+  "theme_color": "#1746e8",
+  "description": "غسيل وكي على مزاجك، لحد باب البيت."
+}
