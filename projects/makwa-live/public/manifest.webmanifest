@@ -14,6 +14,10 @@
   "description": "غسيل وكي على مزاجك، لحد باب البيت.",
   "categories": ["shopping", "lifestyle"],
   "icons": [
-    { "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+    { "src": "./icon.svg", "sizes": "any 192x192 512x512", "type": "image/svg+xml", "purpose": "any maskable" }
+  ],
+  "shortcuts": [
+    { "name": "اطلب الآن", "short_name": "طلب جديد", "url": "./?view=order", "icons": [{ "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml" }] },
+    { "name": "طلباتي", "short_name": "طلباتي", "url": "./?view=orders", "icons": [{ "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml" }] }
   ]
 }

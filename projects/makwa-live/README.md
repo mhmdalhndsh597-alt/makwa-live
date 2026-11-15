@@ -1,8 +1,8 @@
 # ماكوا لايف | Makwa Live
 
-تطبيق ويب تقدّمي تجريبي لخدمة غسيل وكي مصرية، بواجهة عربية RTL. الواجهة تحفظ حالة الطلبات والمنشورات والقصص والشكاوى والإعدادات على الجهاز باستخدام `localStorage`.
+تطبيق ويب تقدّمي تجريبي لخدمة غسيل وكي مصرية، بواجهة عربية RTL. تحفظ الواجهة الطلبات والمنشورات والقصص والشكاوى والإعدادات على الجهاز باستخدام `localStorage`.
 
-## التشغيل
+## التشغيل والبناء
 
 يتطلب Node.js 18+:
 
@@ -13,18 +13,18 @@ npm run dev
 
 لبناء نسخة الإنتاج والتحقق منها: `npm run build`، ثم `npm run preview` لمعاينتها.
 
+## تثبيت PWA
+
+يظهر زر التثبيت عندما يدعم المتصفح التثبيت المباشر. على iPhone/iPad افتح الموقع في Safari، واضغط **مشاركة** ثم **إضافة إلى الشاشة الرئيسية**. يحتاج Service Worker إلى HTTPS (أو localhost للتطوير). ألوان شاشة البداية يحددها النظام من manifest؛ لا توجد حاليًا صور splash مخصصة متعددة المقاسات.
+
 ## بيانات واتساب
 
-رقم واتساب الرسمي غير مضمّن عمدًا. افتح **وضع الإدارة** وأضف الرقم بصيغته الدولية، أرقام فقط (مثل `201XXXXXXXXX`). رابط واتساب يفتح رسالة جاهزة؛ التطبيق لا يرسل الرسائل نيابةً عن العميل. يجب على العميل الضغط على إرسال. شكوى الصورة تُرفق يدويًا في المحادثة بعد فتح واتساب.
+رقم واتساب الرسمي غير مضمّن. افتح **وضع الإدارة** وأضف الرقم بصيغته الدولية، أرقام فقط (مثل `201XXXXXXXXX`). التطبيق يفتح رسالة جاهزة؛ العميل يراجعها ويضغط إرسال بنفسه. صور الشكوى تحتاج إلى إرفاق يدوي داخل واتساب.
 
-## الفواتير والمدفوعات
+## حدود مهمة قبل الإطلاق الحقيقي
 
-الفاتورة ملخص محلي غير ضريبي، تعرض القطع والخصم ورسوم التوصيل وطريقة الدفع. خيارات الدفع الظاهرة اختيارية وليست بوابة دفع أو تحققًا من تحويل فعلي. رسوم التوصيل الافتراضية ٢٥ ج.م ويمكن تعديلها من الإدارة.
-
-## PWA وحدود الإنتاج
-
-ملف manifest وأيقونة SVG وService Worker يوفّرون تثبيتًا وتخزينًا أساسيًا للواجهة. نشر التطبيق يتطلب HTTPS. التثبيت على iOS يتم عبر Safari > مشاركة > إضافة إلى الشاشة الرئيسية؛ دعم أيقونات SVG قد يختلف باختلاف إصدار النظام. البيانات محلية لهذا المتصفح والجهاز فقط وليست مزامنة بين الأجهزة أو خدمة نسخ احتياطي. رفع الصور محلي، والتقدير وتصنيف الشكاوى تجريبيان. لا يوجد خادم إنتاج أو مصادقة أو دفع إلكتروني، لذلك يلزم تطوير هذه الأجزاء ومراجعتها قبل استقبال بيانات أو طلبات حقيقية.
+هذا إصدار واجهة تجريبي وليس منصة جاهزة لاستقبال طلبات حقيقية: `localStorage` خاص بمتصفح وجهاز واحد ولا يوفر قاعدة بيانات أو نسخًا احتياطيًا أو تزامنًا؛ وضع الإدارة ليس محميًا بتسجيل دخول؛ لا يوجد خادم لمعالجة الطلبات أو التحقق من التحويلات؛ خيارات الدفع والفواتير معلوماتية وليست بوابة دفع/فواتير ضريبية؛ وظائف AI محاكاة؛ الصور تُخزن على الجهاز. يلزم بناء backend آمن، مصادقة وصلاحيات، تخزين بيانات وصور، سياسة خصوصية، واختبار نشر قبل الإطلاق التجاري.
 
 ## English
 
-A local-first Egyptian Arabic RTL laundry PWA demo. Orders, stories, offers, complaints, and settings persist in browser localStorage. WhatsApp requires the real business number to be configured in Admin; users review and send the generated message themselves. Invoices are informational only, payment methods are selections rather than payment processing, and demo AI is not real. Deploy over HTTPS for service-worker/PWA support.
+A mobile-first Egyptian Arabic RTL PWA demo. Local browser storage is not a shared production database. WhatsApp links open a prefilled message for the user to send. Payment options are selections only, invoices are informational, and demo AI is not real. Admin mode has no authentication; do not use this build to accept real customer data or payments until a secure backend and operational controls are implemented and tested.
