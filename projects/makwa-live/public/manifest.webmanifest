@@ -1,0 +1,23 @@
+{
+  "name": "ماكوا لايف | Makwa Live",
+  "short_name": "ماكوا لايف",
+  "lang": "ar-EG",
+  "dir": "rtl",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait-primary",
+  "background_color": "#f4f7ff",
+  "theme_color": "#1746e8",
+  "description": "غسيل وكي على مزاجك، لحد باب البيت.",
+  "categories": ["shopping", "lifestyle"],
+  "icons": [
+    { "src": "./icon.svg", "sizes": "any 192x192 512x512", "type": "image/svg+xml", "purpose": "any maskable" }
+  ],
+  "shortcuts": [
+    { "name": "اطلب الآن", "short_name": "طلب جديد", "url": "./?view=order", "icons": [{ "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml" }] },
+    { "name": "طلباتي", "short_name": "طلباتي", "url": "./?view=orders", "icons": [{ "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml" }] }
+  ]
+}
