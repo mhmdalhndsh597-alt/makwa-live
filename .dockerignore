@@ -1,0 +1,6 @@
+node_modules
+projects/makwa-live/node_modules
+projects/makwa-live/dist
+.git
+.env
+.env.*
