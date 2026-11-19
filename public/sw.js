@@ -1,5 +1,5 @@
 const CACHE = 'makwa-live-v1';
-const CORE = ['/', '/index.html', '/styles.css', '/app.js', '/manifest.webmanifest', '/manus-routes.json', '/icons/makwa-mark.svg'];
+const CORE = ['./', './index.html', './styles.css', './app.js', './manifest.webmanifest', './manus-routes.json', './icons/makwa-mark.svg', './assets/laundry-hero.svg', './assets/steam-care.svg', './assets/packaging.svg'];
 self.addEventListener('install', event => event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(CORE)).then(() => self.skipWaiting())));
 self.addEventListener('activate', event => event.waitUntil(self.clients.claim()));
 self.addEventListener('fetch', event => {
@@ -8,5 +8,5 @@ self.addEventListener('fetch', event => {
     const copy = response.clone();
     caches.open(CACHE).then(cache => cache.put(event.request, copy));
     return response;
-  }).catch(() => caches.match('/index.html'))));
+  }).catch(() => caches.match('./index.html'))));
 });

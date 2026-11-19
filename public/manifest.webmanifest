@@ -8,5 +8,5 @@
   "display": "standalone",
   "background_color": "#071127",
   "theme_color": "#2e5bff",
-  "icons": [{ "src": "/icons/makwa-mark.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+  "icons": [{ "src": "icons/makwa-mark.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
 }
