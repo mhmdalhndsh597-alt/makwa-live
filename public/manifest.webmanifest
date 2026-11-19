@@ -1,0 +1,12 @@
+{
+  "name": "ماكوا لايف | Makwa Live",
+  "short_name": "ماكوا لايف",
+  "description": "خدمة غسيل وكي بالبخار وتنظيف جاف بتجربة عصرية.",
+  "lang": "ar-EG",
+  "dir": "rtl",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#071127",
+  "theme_color": "#2e5bff",
+  "icons": [{ "src": "/icons/makwa-mark.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

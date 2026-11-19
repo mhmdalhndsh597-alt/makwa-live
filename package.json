@@ -1,0 +1,12 @@
+{
+  "name": "makwa-live",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.12.4",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node server/server.js",
+    "build": "node -e \"console.log('Makwa Live static PWA build ready')\""
+  }
+}
